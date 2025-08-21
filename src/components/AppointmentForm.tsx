@@ -1,73 +1,44 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Calendar, Clock, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
-import { toast } from "sonner";
+import { Calendar, Clock, Phone, MapPin } from "lucide-react";
 
 const AppointmentForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    preferredDate: "",
-    branch: "",
-    service: "",
-    message: ""
-  });
+  const [statusMessage, setStatusMessage] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission - replace with actual Formspree endpoint
+  const getISTTimestamp = () => {
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API call
-      setIsSubmitted(true);
-      toast.success("Appointment request submitted successfully! We'll contact you within 24 hours.");
-    } catch (error) {
-      toast.error("Failed to submit appointment request. Please try again or call us directly.");
-    } finally {
-      setIsSubmitting(false);
+      const locale = new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
+      return new Date(locale).toLocaleString('en-GB', {
+        day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit'
+      }) + ' IST';
+    } catch(e) {
+      return new Date().toISOString();
     }
   };
 
-  const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const email = formData.get('email') as string || '';
+    
+    // Set hidden fields
+    const replytoField = form.querySelector('input[name="_replyto"]') as HTMLInputElement;
+    const timestampField = form.querySelector('input[name="submission_time"]') as HTMLInputElement;
+    
+    if (replytoField) replytoField.value = email;
+    if (timestampField) timestampField.value = getISTTimestamp();
+    
+    setIsSubmitting(true);
+    setStatusMessage("Sending your appointment request...");
+    
+    // Allow native form submission to Formspree
   };
-
-  if (isSubmitted) {
-    return (
-      <section id="appointment" className="py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <Card className="max-w-2xl mx-auto text-center shadow-hero bg-gradient-card backdrop-blur-sm border-0">
-            <CardContent className="p-12">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="h-10 w-10 text-green-600" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Appointment Request Received!</h3>
-              <p className="text-muted-foreground mb-8">
-                Thank you for choosing NAVYA'S International Dental Hospital. 
-                Our team will contact you within 24 hours to confirm your appointment.
-              </p>
-              <Button 
-                onClick={() => setIsSubmitted(false)}
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary/10"
-              >
-                Book Another Appointment
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="appointment" className="py-24 bg-secondary/30">
@@ -155,115 +126,140 @@ const AppointmentForm = () => {
                 <CardTitle className="text-2xl">Schedule Your Appointment</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                  ref={formRef}
+                  action="https://formspree.io/f/mblkvnwg" 
+                  method="POST"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                  autoComplete="on"
+                  noValidate
+                >
+                  {/* Honeypot */}
+                  <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" style={{display: 'none'}} />
+                  
+                  {/* Hidden fields */}
+                  <input type="hidden" name="_subject" value="New Appointment Request — NAVYA'S DENTAL HOSPITAL" />
+                  <input type="hidden" name="_language" value="en" />
+                  <input type="hidden" name="_next" value="/thank-you.html" />
+                  <input type="hidden" name="_replyto" value="" />
+                  <input type="hidden" name="submission_time" value="" />
+
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
                       <Input
                         id="name"
-                        value={formData.name}
-                        onChange={(e) => handleChange('name', e.target.value)}
+                        name="name"
                         required
                         className="bg-background/50"
+                        placeholder="Enter your full name"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number *</Label>
                       <Input
                         id="phone"
+                        name="phone"
                         type="tel"
-                        value={formData.phone}
-                        onChange={(e) => handleChange('phone', e.target.value)}
                         required
                         className="bg-background/50"
+                        placeholder="Enter your phone number"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
+                    <Label htmlFor="email">Email Address *</Label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={(e) => handleChange('email', e.target.value)}
+                      required
                       className="bg-background/50"
+                      placeholder="Enter your email address"
                     />
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="preferredDate">Preferred Date</Label>
+                      <Label htmlFor="preferred_date">Preferred Date</Label>
                       <Input
-                        id="preferredDate"
+                        id="preferred_date"
+                        name="preferred_date"
                         type="date"
-                        value={formData.preferredDate}
-                        onChange={(e) => handleChange('preferredDate', e.target.value)}
                         className="bg-background/50"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="branch">Preferred Branch</Label>
-                      <Select onValueChange={(value) => handleChange('branch', value)}>
-                        <SelectTrigger className="bg-background/50">
-                          <SelectValue placeholder="Select branch" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="branch1">Branch 1 - A.C. College Main Road</SelectItem>
-                          <SelectItem value="branch2">Branch 2</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <select 
+                        id="branch"
+                        name="branch" 
+                        className="w-full px-3 py-2 bg-background/50 border border-input rounded-md text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      >
+                        <option value="">Select Branch (optional)</option>
+                        <option value="Branch 1 — A.C. College Main Road (0863-2337777)">Branch 1 — A.C. College Main Road (0863-2337777)</option>
+                        <option value="Branch 2 — (0863-2222019)">Branch 2 — (0863-2222019)</option>
+                      </select>
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="service">Service Required</Label>
-                    <Select onValueChange={(value) => handleChange('service', value)}>
-                      <SelectTrigger className="bg-background/50">
-                        <SelectValue placeholder="Select service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="general">General Dentistry</SelectItem>
-                        <SelectItem value="cosmetic">Cosmetic Dentistry</SelectItem>
-                        <SelectItem value="rootcanal">Root Canal Treatment</SelectItem>
-                        <SelectItem value="implants">Dental Implants</SelectItem>
-                        <SelectItem value="orthodontics">Orthodontics</SelectItem>
-                        <SelectItem value="surgery">Maxillofacial Surgery</SelectItem>
-                        <SelectItem value="pediatric">Pediatric Dentistry</SelectItem>
-                        <SelectItem value="periodontics">Periodontics</SelectItem>
-                        <SelectItem value="consultation">General Consultation</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <select 
+                      id="service"
+                      name="service"
+                      className="w-full px-3 py-2 bg-background/50 border border-input rounded-md text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="">Select Service</option>
+                      <option value="General Dentistry">General Dentistry</option>
+                      <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                      <option value="Root Canal Treatment">Root Canal Treatment</option>
+                      <option value="Dental Implants">Dental Implants</option>
+                      <option value="Orthodontics">Orthodontics</option>
+                      <option value="Maxillofacial Surgery">Maxillofacial Surgery</option>
+                      <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+                      <option value="Periodontics">Periodontics</option>
+                      <option value="General Consultation">General Consultation</option>
+                    </select>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Additional Message</Label>
                     <Textarea
                       id="message"
-                      value={formData.message}
-                      onChange={(e) => handleChange('message', e.target.value)}
+                      name="message"
                       placeholder="Please describe your concerns or any specific requirements..."
                       className="bg-background/50 min-h-[100px]"
+                      rows={4}
                     />
                   </div>
 
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting || !formData.name || !formData.phone}
-                    className="w-full bg-gradient-primary hover:scale-105 transition-transform shadow-hero text-lg py-6"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                        Submitting...
-                      </>
-                    ) : (
-                      <>
-                        <Calendar className="h-5 w-5 mr-2" />
-                        Book Appointment
-                      </>
+                  <div className="flex items-center justify-between mt-6">
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="bg-gradient-primary hover:scale-105 transition-transform shadow-hero text-lg py-6 px-8 flex-1 mr-4"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Calendar className="h-5 w-5 mr-2" />
+                          Send Appointment Request
+                        </>
+                      )}
+                    </Button>
+                    {statusMessage && (
+                      <div className="text-sm text-green-600" role="status" aria-live="polite">
+                        {statusMessage}
+                      </div>
                     )}
-                  </Button>
+                  </div>
 
                   <p className="text-xs text-muted-foreground text-center">
                     By submitting this form, you agree to our privacy policy. 
