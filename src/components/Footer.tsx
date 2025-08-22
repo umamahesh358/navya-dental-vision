@@ -116,8 +116,8 @@ const Footer = () => {
               <div className="flex items-center gap-2 text-sm">
                 <Phone className="h-4 w-4 text-red-400" />
                 <span className="text-red-100">Emergency: </span>
-                <a href="tel:9100078787" className="text-white font-medium hover:text-red-200">
-                  9100078787
+                <a href="tel:9100831618" className="text-white font-medium hover:text-red-200">
+                  9100831618
                 </a>
               </div>
             </Card>

@@ -24,14 +24,13 @@ const Header = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <a href="tel:08632337777" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
+            <a href="tel:08632235113" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
               <Phone className="h-4 w-4" />
-              <span>0863-2235112</span>
+              <span>0863-2235113</span>
             </a>
-            <a href="tel:08632222019" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
+            <a href="tel:9100831618" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
               <Phone className="h-4 w-4" />
-              <span>
-            </span>
+              <span>9100831618</span>
             </a>
           </div>
         </div>
@@ -39,7 +38,13 @@ const Header = () => {
         {/* Main Navigation */}
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-3">
-            <img src="/lovable-uploads/7c51b673-6ade-4291-a971-9fdbf9406b70.png" alt="NAVYA'S Dental Hospital" className="h-12 w-auto" />
+            <div className="h-12 w-12 rounded-full overflow-hidden bg-white p-1 shadow-lg">
+              <img src="/lovable-uploads/7c51b673-6ade-4291-a971-9fdbf9406b70.png" alt="NAVYA'S Dental Hospital" className="h-full w-full object-contain" />
+            </div>
+            <div>
+              <h1 className="text-xl font-bold text-foreground">NAVYA'S</h1>
+              <p className="text-sm text-muted-foreground">International Dental Hospital</p>
+            </div>
           </div>
 
           <nav className="hidden lg:flex items-center gap-8">
