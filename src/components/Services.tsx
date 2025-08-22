@@ -14,52 +14,58 @@ import {
 const Services = () => {
   const services = [
     {
-      icon: Smile,
-      title: "General Dentistry",
-      description: "Comprehensive oral health checkups, cleanings, fillings, and preventive care for the whole family.",
-      features: ["Regular Checkups", "Dental Cleanings", "Cavity Fillings", "Preventive Care"]
+      icon: Heart,
+      title: "Root Canal Treatment",
+      description: "Pain-free single sitting and multi-sitting root canal therapy using advanced endodontic techniques.",
+      features: ["Single Sitting RCT", "Multi Sitting RCT", "Pain-free Treatment", "Advanced Technology"]
+    },
+    {
+      icon: Crown,
+      title: "Dental Implantology",
+      description: "World-class implants in association with Indian Dental Education Academy, Chennai.",
+      features: ["Wide Range of Implants", "Expert Consultation", "Permanent Solution", "Natural Looking"]
+    },
+    {
+      icon: Scissors,
+      title: "Maxillofacial Surgeries",
+      description: "Advanced facial surgeries including TMJ, orthognathic surgeries, and trauma management.",
+      features: ["T.M.J Ankylosis", "Orthognathic Surgery", "Lefort Fractures", "Pan-facial Fractures"]
     },
     {
       icon: Sparkles,
       title: "Cosmetic Dentistry",
-      description: "Transform your smile with advanced cosmetic treatments including whitening, veneers, and smile makeovers.",
-      features: ["Teeth Whitening", "Porcelain Veneers", "Smile Makeovers", "Aesthetic Bonding"]
-    },
-    {
-      icon: Heart,
-      title: "Root Canal Treatment",
-      description: "Pain-free single sitting root canal therapy using advanced endodontic techniques and equipment.",
-      features: ["Single Sitting RCT", "Pain-free Treatment", "Advanced Technology", "High Success Rate"]
-    },
-    {
-      icon: Crown,
-      title: "Dental Implants",
-      description: "Permanent tooth replacement solutions with titanium implants for natural-looking, long-lasting results.",
-      features: ["Titanium Implants", "Crown Placement", "Bone Grafting", "All-on-4 Treatment"]
+      description: "Complete smile designing and aesthetic treatments for a perfect smile transformation.",
+      features: ["Smile Designing", "Lip Contouring", "Dimple Creation", "Dental Jewellery"]
     },
     {
       icon: Zap,
       title: "Orthodontics",
-      description: "Straighten teeth and correct bite issues with traditional braces and modern clear aligner systems.",
-      features: ["Metal Braces", "Ceramic Braces", "Clear Aligners", "Bite Correction"]
-    },
-    {
-      icon: Scissors,
-      title: "Maxillofacial Surgery",
-      description: "Advanced surgical procedures for jaw, face, and mouth conditions performed by expert surgeons.",
-      features: ["Wisdom Tooth Extraction", "Jaw Surgery", "Facial Trauma", "Oral Pathology"]
+      description: "Orthodontic and dento-facial correction of malocclusions for proper teeth alignment.",
+      features: ["Braces Treatment", "Dento-facial Correction", "Malocclusion Treatment", "Smile Alignment"]
     },
     {
       icon: Baby,
       title: "Pediatric Dentistry",
-      description: "Specialized dental care for children with a gentle approach and child-friendly environment.",
+      description: "Specialized dental care for children with gentle approach and child-friendly environment.",
       features: ["Child-friendly Care", "Preventive Treatments", "Behavior Management", "Early Intervention"]
     },
     {
+      icon: Smile,
+      title: "Complete Oral Care",
+      description: "Comprehensive dental services including prophylaxis, dentures, and bleaching treatments.",
+      features: ["Oral Prophylaxis", "Complete Dentures", "Teeth Bleaching", "Fixed & Removable Teeth"]
+    },
+    {
       icon: Shield,
-      title: "Periodontics",
-      description: "Treatment of gum diseases and conditions affecting the supporting structures of teeth.",
-      features: ["Gum Disease Treatment", "Scaling & Polishing", "Gum Surgery", "Maintenance Therapy"]
+      title: "Laser Dentistry",
+      description: "Advanced laser treatments for precise and minimally invasive dental procedures.",
+      features: ["Laser Surgery", "Flap Surgeries", "Minimally Invasive", "Faster Healing"]
+    },
+    {
+      icon: Heart,
+      title: "Sedation Dentistry",
+      description: "Comfortable dental treatments with sedation options for anxious patients.",
+      features: ["Anxiety Management", "Comfortable Treatment", "Safe Sedation", "Relaxed Experience"]
     }
   ];
 

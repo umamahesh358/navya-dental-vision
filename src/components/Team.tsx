@@ -8,52 +8,130 @@ import doctor2 from "@/assets/doctor-2.jpg";
 const Team = () => {
   const doctors = [
     {
-      name: "Prof. Dr. Kishore Babu Tallapati",
-      role: "Managing Director & Chief Surgeon",
+      name: "Prof. Dr. Y. Kishore Babu",
+      role: "Managing Director & Maxillofacial Surgeon",
       image: doctor1,
-      specialties: ["Maxillofacial Surgery", "Dental Implants", "Oral Pathology"],
-      experience: "25+ Years",
-      education: "MDS, FDSRCS (Edinburgh)"
+      specialties: ["Maxillofacial Surgery", "Implantology"],
+      education: "M.D.S."
     },
     {
-      name: "Dr. Navya Kondabolu",
-      role: "Chief Dental Officer",
+      name: "Dr. Y. Sucharitha",
+      role: "Root Canal Specialist",
       image: doctor2,
-      specialties: ["Cosmetic Dentistry", "Orthodontics", "Pediatric Care"],
-      experience: "15+ Years", 
-      education: "MDS, Fellowship in Cosmetic Dentistry"
+      specialties: ["Endodontics", "Root Canal Therapy"],
+      education: "B.D.S, P.G.C.E"
     },
     {
-      name: "Dr. Rajesh Kumar",
-      role: "Senior Endodontist",
-      image: doctor1,
-      specialties: ["Root Canal Therapy", "Endodontics", "Pain Management"],
-      experience: "12+ Years",
-      education: "MDS Endodontics"
-    },
-    {
-      name: "Dr. Priya Sharma",
+      name: "Dr. Sunil Surapaneni",
       role: "Periodontist",
-      image: doctor2,
-      specialties: ["Gum Surgery", "Periodontics", "Laser Therapy"],
-      experience: "10+ Years",
-      education: "MDS Periodontics"
-    },
-    {
-      name: "Dr. Anil Reddy",
-      role: "Oral Surgeon",
       image: doctor1,
-      specialties: ["Oral Surgery", "Wisdom Teeth", "Trauma Care"],
-      experience: "18+ Years",
-      education: "MDS Oral Surgery"
+      specialties: ["Periodontics", "Gum Surgery"],
+      education: "M.D.S."
     },
     {
-      name: "Dr. Lakshmi Devi",
+      name: "Prof. Dr. A. Ravi Kiran",
+      role: "Oral Medicine & Radiology",
+      image: doctor2,
+      specialties: ["Oral Medicine", "Radiology"],
+      education: "M.D.S."
+    },
+    {
+      name: "Prof. Dr. Ajay Reginald",
+      role: "Oral Pathologist",
+      image: doctor1,
+      specialties: ["Oral Pathology", "Diagnostics"],
+      education: "M.D.S."
+    },
+    {
+      name: "Dr. M. Raja Sekar",
+      role: "Orthodontist",
+      image: doctor2,
+      specialties: ["Orthodontics", "Dento Facial Correction"],
+      education: "M.D.S."
+    },
+    {
+      name: "Dr. Srikanth",
+      role: "Cleft Lip & Palate Surgeon",
+      image: doctor1,
+      specialties: ["Cleft Surgery", "Reconstructive Surgery"],
+      education: "M.D.S."
+    },
+    {
+      name: "Ass. Prof. Dr. Ch. Mahesh",
       role: "Pediatric Dentist",
       image: doctor2,
-      specialties: ["Child Dentistry", "Preventive Care", "Behavior Management"],
-      experience: "8+ Years",
-      education: "MDS Pedodontics"
+      specialties: ["Pediatric Dentistry", "Child Care"],
+      education: "M.S."
+    },
+    {
+      name: "Dr. Sowjanya",
+      role: "Cosmetic Dental Surgeon",
+      image: doctor1,
+      specialties: ["Cosmetic Dentistry", "Smile Designing"],
+      education: "M.D.S."
+    },
+    {
+      name: "Dr. T. Nalini",
+      role: "Anaesthetist",
+      image: doctor2,
+      specialties: ["Anaesthesia", "Sedation Dentistry"],
+      education: "M.B.B.S., B.A."
+    },
+    {
+      name: "Dr. M. Nagendra Prasad",
+      role: "Physician",
+      image: doctor1,
+      specialties: ["General Medicine", "Medical Care"],
+      education: "M.D., GEN"
+    },
+    {
+      name: "Dr. N. Ramakrishna Reddy",
+      role: "Neuro Surgeon",
+      image: doctor2,
+      specialties: ["Neurosurgery", "Brain Surgery"],
+      education: "M.S., M.Ch."
+    },
+    {
+      name: "Dr. Ch. Ratna Manmohan",
+      role: "Diabetologist",
+      image: doctor1,
+      specialties: ["Diabetes Care", "Endocrinology"],
+      education: "M.D.S., Dip. Dis."
+    },
+    {
+      name: "Prof. Dr. Y. Subba Rayudu",
+      role: "E.N.T. Specialist",
+      image: doctor2,
+      specialties: ["ENT Surgery", "Ear Nose Throat"],
+      education: "M.S.E.N.T."
+    },
+    {
+      name: "Dr. Ch. Kalyan Kumar",
+      role: "General Surgeon",
+      image: doctor1,
+      specialties: ["General Surgery", "Surgical Procedures"],
+      education: "M.S. GEN."
+    },
+    {
+      name: "Dr. N. Sarath Chandra",
+      role: "Neurologist",
+      image: doctor2,
+      specialties: ["Neurology", "Brain Disorders"],
+      education: "M.D.S., (ROM)"
+    },
+    {
+      name: "R. Sreesha",
+      role: "Audiologist & Speech Therapist",
+      image: doctor1,
+      specialties: ["Audiology", "Speech Therapy"],
+      education: "M.SC.(SLP), P.G.C.P.C.M.S."
+    },
+    {
+      name: "Dr. K. Subba Rao",
+      role: "Physiotherapist",
+      image: doctor2,
+      specialties: ["Physiotherapy", "Rehabilitation"],
+      education: "D.P.T."
     }
   ];
 
@@ -90,9 +168,6 @@ const Team = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <Badge className="absolute top-4 left-4 bg-primary/90 text-primary-foreground">
-                  {doctor.experience}
-                </Badge>
               </div>
               
               <CardContent className="p-6">
