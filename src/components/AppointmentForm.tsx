@@ -170,7 +170,7 @@ const AppointmentForm = () => {
                   </div>
 
                   <div className="flex items-center justify-between mt-6">
-                    <Button type="submit" disabled={isSubmitting} className="bg-gradient-primary hover:scale-105 transition-transform shadow-hero text-lg py-6 px-8 flex-1 mr-4">
+                    <Button type="submit" disabled={isSubmitting} variant="gradient" className="shadow-hero text-lg py-6 px-8 flex-1 mr-4">
                       {isSubmitting ? <>
                           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
                           Sending...

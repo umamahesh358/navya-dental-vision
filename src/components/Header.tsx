@@ -55,7 +55,7 @@ const Header = () => {
             <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors">Contact</button>
           </nav>
 
-          <Button onClick={() => scrollToSection('appointment')} className="bg-gradient-primary hover:scale-105 transition-transform shadow-hero">
+          <Button onClick={() => scrollToSection('appointment')} variant="gradient" className="shadow-hero">
             Book Appointment
           </Button>
         </div>

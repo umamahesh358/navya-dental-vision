@@ -147,7 +147,7 @@ const Gallery = () => {
               Join thousands of satisfied patients who have transformed their smiles 
               with our expert care and advanced treatments.
             </p>
-            <Button size="lg" className="bg-gradient-primary hover:scale-105 transition-transform shadow-hero" onClick={() => {
+            <Button size="lg" variant="gradient" className="shadow-hero" onClick={() => {
             const element = document.getElementById('appointment');
             if (element) {
               element.scrollIntoView({

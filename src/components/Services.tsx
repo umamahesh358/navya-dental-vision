@@ -133,7 +133,8 @@ const Services = () => {
           <Button 
             onClick={scrollToAppointment}
             size="lg" 
-            className="bg-gradient-primary hover:scale-105 transition-transform shadow-hero"
+            variant="gradient"
+            className="shadow-hero"
           >
             Schedule Your Consultation Today
           </Button>

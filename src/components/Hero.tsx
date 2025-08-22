@@ -33,7 +33,7 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button onClick={() => scrollToSection('appointment')} size="lg" className="bg-gradient-primary hover:scale-105 transition-all shadow-hero text-lg px-8 py-6">
+              <Button onClick={() => scrollToSection('appointment')} size="lg" variant="gradient" className="shadow-hero text-lg px-8 py-6">
                 Book Consultation
               </Button>
               <Button onClick={() => scrollToSection('services')} variant="outline" size="lg" className="border-primary text-lg px-8 py-6 text-sky-500 bg-blue-100">
