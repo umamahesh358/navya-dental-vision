@@ -111,7 +111,7 @@ const AppointmentForm = () => {
                 <CardTitle className="text-2xl">Schedule Your Appointment</CardTitle>
               </CardHeader>
               <CardContent>
-                <form ref={formRef} action="https://formspree.io/f/mblkvnwg" method="POST" onSubmit={handleSubmit} className="space-y-6" autoComplete="on" noValidate>
+                <form ref={formRef} action="https://formspree.io/f/xwpqgbja" method="POST" onSubmit={handleSubmit} className="space-y-6" autoComplete="on" noValidate>
                   {/* Honeypot */}
                   <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" style={{
                   display: 'none'
