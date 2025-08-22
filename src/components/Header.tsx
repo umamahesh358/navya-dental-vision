@@ -21,17 +21,18 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              <span>10:00 AM - 2:00 PM (Sun Holiday)</span>
+              <span>10:30 AM - 7:30 PM (Sunday Holiday)</span>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <a href="tel:08632337777" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
               <Phone className="h-4 w-4" />
-              <span>0863-233</span>
+              <span>0863-2235112</span>
             </a>
             <a href="tel:08632222019" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
               <Phone className="h-4 w-4" />
-              <span>0863-2222</span>
+              <span>
+            </span>
             </a>
           </div>
         </div>
