@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock } from "lucide-react";
-import logo from "@/assets/logo.png";
 const Header = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -40,11 +39,7 @@ const Header = () => {
         {/* Main Navigation */}
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="NAVYA'S Dental Hospital" className="h-12 w-12" />
-            <div>
-              <h1 className="text-xl font-bold text-foreground">NAVYA'S</h1>
-              <p className="text-sm text-muted-foreground">International Dental Hospital</p>
-            </div>
+            <img src="/lovable-uploads/7c51b673-6ade-4291-a971-9fdbf9406b70.png" alt="NAVYA'S Dental Hospital" className="h-12 w-auto" />
           </div>
 
           <nav className="hidden lg:flex items-center gap-8">
