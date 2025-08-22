@@ -2,19 +2,17 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Mail, Facebook, Instagram, Youtube, Award } from "lucide-react";
 import logo from "@/assets/logo.png";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <footer className="bg-dark-accent text-dark-accent-foreground">
+  return <footer className="bg-dark-accent text-dark-accent-foreground">
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Hospital Info */}
@@ -37,7 +35,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
-                  <strong>Branch 1:</strong> A.C. College Main Road, Between Canara Bank & Srichakra Show Room, 
+                  <strong>Branch :</strong> A.C. College Main Road, Between Canara Bank & Srichakra Show Room, 
                   Guntur - 522002
                 </div>
               </div>
@@ -45,19 +43,12 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-accent" />
                 <div className="text-sm text-gray-300">
-                  <a href="tel:08632337777" className="hover:text-white transition-colors">0863-2337777</a> | 
-                  <a href="tel:9100078787" className="hover:text-white transition-colors ml-1">9100078787</a>
+                  <a href="tel:08632337777" className="hover:text-white transition-colors">0863-2235113</a> | 
+                  <a href="tel:9100078787" className="hover:text-white transition-colors ml-1">9100831618</a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-accent" />
-                <div className="text-sm text-gray-300">
-                  <strong>Branch 2:</strong> 
-                  <a href="tel:08632222019" className="hover:text-white transition-colors ml-1">0863-2222019</a> | 
-                  <a href="tel:9989812919" className="hover:text-white transition-colors ml-1">9989812919</a>
-                </div>
-              </div>
+              
               
               <div className="flex items-center gap-3">
                 <Clock className="h-5 w-5 text-accent" />
@@ -72,34 +63,19 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
             <div className="space-y-3">
-              <button 
-                onClick={() => scrollToSection('home')}
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('home')} className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Home
               </button>
-              <button 
-                onClick={() => scrollToSection('services')}
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('services')} className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Our Services
               </button>
-              <button 
-                onClick={() => scrollToSection('team')}
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('team')} className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Our Team
               </button>
-              <button 
-                onClick={() => scrollToSection('gallery')}
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('gallery')} className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Gallery
               </button>
-              <button 
-                onClick={() => scrollToSection('appointment')}
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('appointment')} className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Book Appointment
               </button>
             </div>
@@ -128,25 +104,13 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <span className="text-sm text-gray-300">Follow us:</span>
               <div className="flex gap-3">
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
-                  className="text-gray-300 hover:text-white hover:bg-white/10"
-                >
+                <Button size="sm" variant="ghost" className="text-gray-300 hover:text-white hover:bg-white/10">
                   <Facebook className="h-4 w-4" />
                 </Button>
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
-                  className="text-gray-300 hover:text-white hover:bg-white/10"
-                >
+                <Button size="sm" variant="ghost" className="text-gray-300 hover:text-white hover:bg-white/10">
                   <Instagram className="h-4 w-4" />
                 </Button>
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
-                  className="text-gray-300 hover:text-white hover:bg-white/10"
-                >
+                <Button size="sm" variant="ghost" className="text-gray-300 hover:text-white hover:bg-white/10">
                   <Youtube className="h-4 w-4" />
                 </Button>
               </div>
@@ -196,8 +160,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

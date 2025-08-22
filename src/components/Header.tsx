@@ -1,17 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
-
 const Header = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <header className="bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 shadow-card">
+  return <header className="bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 shadow-card">
       <div className="container mx-auto px-4">
         {/* Top Bar */}
         <div className="hidden md:flex items-center justify-between py-2 text-sm border-b border-border/30">
@@ -28,11 +27,11 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <a href="tel:08632337777" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
               <Phone className="h-4 w-4" />
-              <span>0863-2337777</span>
+              <span>0863-233</span>
             </a>
             <a href="tel:08632222019" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
               <Phone className="h-4 w-4" />
-              <span>0863-2222019</span>
+              <span>0863-2222</span>
             </a>
           </div>
         </div>
@@ -55,16 +54,11 @@ const Header = () => {
             <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors">Contact</button>
           </nav>
 
-          <Button 
-            onClick={() => scrollToSection('appointment')}
-            className="bg-gradient-primary hover:scale-105 transition-transform shadow-hero"
-          >
+          <Button onClick={() => scrollToSection('appointment')} className="bg-gradient-primary hover:scale-105 transition-transform shadow-hero">
             Book Appointment
           </Button>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;

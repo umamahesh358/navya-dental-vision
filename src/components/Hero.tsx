@@ -3,25 +3,22 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Award, Clock, Users } from "lucide-react";
 import heroImage from "@/assets/hero-dental-hospital.jpg";
-
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-secondary/30 to-background pt-20">
+  return <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-secondary/30 to-background pt-20">
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <Badge variant="secondary" className="text-primary font-medium">
-                Kondabolu Chowdary Memorial
-              </Badge>
+              <Badge variant="secondary" className="text-primary font-medium">Kondaiah Chowdary Memorial</Badge>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 World-Class
                 <span className="block bg-gradient-primary bg-clip-text text-transparent">
@@ -36,19 +33,10 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                onClick={() => scrollToSection('appointment')}
-                size="lg" 
-                className="bg-gradient-primary hover:scale-105 transition-all shadow-hero text-lg px-8 py-6"
-              >
+              <Button onClick={() => scrollToSection('appointment')} size="lg" className="bg-gradient-primary hover:scale-105 transition-all shadow-hero text-lg px-8 py-6">
                 Book Consultation
               </Button>
-              <Button 
-                onClick={() => scrollToSection('services')}
-                variant="outline" 
-                size="lg"
-                className="border-primary text-primary hover:bg-primary/5 text-lg px-8 py-6"
-              >
+              <Button onClick={() => scrollToSection('services')} variant="outline" size="lg" className="border-primary hover:bg-primary/5 text-lg px-8 py-6 text-sky-500">
                 Explore Services
               </Button>
             </div>
@@ -68,8 +56,10 @@ const Hero = () => {
                 <div className="text-sm text-muted-foreground">Specialists</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">2</div>
-                <div className="text-sm text-muted-foreground">Branches</div>
+                <div className="text-2xl font-bold text-primary">
+              </div>
+                <div className="text-sm text-muted-foreground">
+              </div>
               </div>
             </div>
           </div>
@@ -78,11 +68,7 @@ const Hero = () => {
           <div className="relative">
             <Card className="overflow-hidden shadow-hero bg-gradient-card backdrop-blur-sm border-0 animate-float">
               <div className="aspect-video relative">
-                <img 
-                  src={heroImage} 
-                  alt="Modern Dental Hospital Interior" 
-                  className="w-full h-full object-cover"
-                />
+                <img src={heroImage} alt="Modern Dental Hospital Interior" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-hero" />
               </div>
               
@@ -137,8 +123,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
