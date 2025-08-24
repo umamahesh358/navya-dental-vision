@@ -120,7 +120,7 @@ const AppointmentForm = () => {
                   {/* Hidden fields */}
                   <input type="hidden" name="_subject" value="New Appointment Request — NAVYA'S DENTAL HOSPITAL" />
                   <input type="hidden" name="_language" value="en" />
-                  <input type="hidden" name="_next" value="/thank-you.html" />
+                  <input type="hidden" name="_next" value="/thank-you" />
                   <input type="hidden" name="_replyto" value="" />
                   <input type="hidden" name="submission_time" value="" />
 
