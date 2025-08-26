@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Smile, Heart, Zap, Baby, Shield, Scissors, Crown, Sparkles } from "lucide-react";
+import { Smile, Heart, Activity, Baby, Shield, Stethoscope, Crown, Sparkles, Zap, Target, Syringe, Scissors } from "lucide-react";
 const Services = () => {
   const services = [{
-    icon: Heart,
+    icon: Activity,
     title: "Root Canal Treatment",
     description: "Pain-free single sitting and multi-sitting root canal therapy using advanced endodontic techniques.",
     features: ["Single Sitting RCT", "Multi Sitting RCT", "Pain-free Treatment", "Advanced Technology"]
@@ -13,7 +13,7 @@ const Services = () => {
     description: "World-class implants in association with Indian Dental Education Academy, Chennai.",
     features: ["Wide Range of Implants", "Expert Consultation", "Permanent Solution", "Natural Looking"]
   }, {
-    icon: Scissors,
+    icon: Stethoscope,
     title: "Maxillofacial Surgeries",
     description: "Advanced facial surgeries including TMJ, orthognathic surgeries, and trauma management.",
     features: ["T.M.J Ankylosis", "Orthognathic Surgery", "Lefort Fractures", "Pan-facial Fractures"]
@@ -23,7 +23,7 @@ const Services = () => {
     description: "Complete smile designing and aesthetic treatments for a perfect smile transformation.",
     features: ["Smile Designing", "Lip Contouring", "Dimple Creation", "Dental Jewellery"]
   }, {
-    icon: Zap,
+    icon: Target,
     title: "Orthodontics",
     description: "Orthodontic and dento-facial correction of malocclusions for proper teeth alignment.",
     features: ["Braces Treatment", "Dento-facial Correction", "Malocclusion Treatment", "Smile Alignment"]
@@ -38,12 +38,12 @@ const Services = () => {
     description: "Comprehensive dental services including prophylaxis, dentures, and bleaching treatments.",
     features: ["Oral Prophylaxis", "Complete Dentures", "Teeth Bleaching", "Fixed & Removable Teeth"]
   }, {
-    icon: Shield,
+    icon: Zap,
     title: "Laser Dentistry",
     description: "Advanced laser treatments for precise and minimally invasive dental procedures.",
     features: ["Laser Surgery", "Flap Surgeries", "Minimally Invasive", "Faster Healing"]
   }, {
-    icon: Heart,
+    icon: Syringe,
     title: "Sedation Dentistry",
     description: "Comfortable dental treatments with sedation options for anxious patients.",
     features: ["Anxiety Management", "Comfortable Treatment", "Safe Sedation", "Relaxed Experience"]
