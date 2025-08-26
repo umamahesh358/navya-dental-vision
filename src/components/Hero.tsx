@@ -36,9 +36,7 @@ const Hero = () => {
               <Button onClick={() => scrollToSection('appointment')} size="lg" variant="gradient" className="shadow-hero text-lg px-8 py-6">
                 Book a caring consultation
               </Button>
-              <Button onClick={() => scrollToSection('international')} variant="secondaryAction" size="lg" className="text-lg px-8 py-6">
-                International patient info
-              </Button>
+              
             </div>
 
             {/* Trust Microcopy */}
