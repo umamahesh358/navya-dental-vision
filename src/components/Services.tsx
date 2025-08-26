@@ -58,45 +58,64 @@ const Services = () => {
   };
   return <section id="services" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Comprehensive
-            <span className="block bg-gradient-primary bg-clip-text text-transparent">
-              Dental Services
-            </span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From routine care to complex procedures, we offer a full range of dental services 
-            with the latest technology and expert specialists.
-          </p>
+        <div className="flex justify-between items-end mb-12">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
+              Dental Specialties
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              Through our comprehensive dental specialties, we provide in-depth expertise in the spectrum of advanced dental and surgical interventions. Our specialties are integrated to provide a seamless experience.
+            </p>
+          </div>
+          <Button variant="ghost" className="text-primary font-semibold hidden md:flex items-center gap-2">
+            VIEW ALL
+            <span className="text-lg">→</span>
+          </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => {
-          const Icon = service.icon;
-          return <Card key={index} className="group hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 border-0 bg-card/80 backdrop-blur-sm">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Icon className="h-8 w-8 text-white" />
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-6">
+          {/* Featured Service Card */}
+          <Card className="lg:col-span-2 md:col-span-2 bg-gradient-to-br from-primary to-accent text-white group hover:shadow-elevated transition-all duration-300">
+            <CardContent className="p-8 h-full flex flex-col justify-between">
+              <div>
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+                  <Crown className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Dental Implantology</h3>
+                <p className="text-white/90 mb-6 leading-relaxed">
+                  World-class implants in association with Indian Dental Education Academy, Chennai. Expert consultation with permanent solutions that look and feel natural.
+                </p>
+              </div>
+              <Button 
+                variant="ghost" 
+                onClick={scrollToAppointment}
+                className="bg-white/20 text-white hover:bg-white/30 font-semibold self-start"
+              >
+                KNOW MORE →
+              </Button>
+            </CardContent>
+          </Card>
+
+          {/* Regular Service Cards */}
+          {services.slice(0, 6).map((service, index) => {
+            if (index === 1) return null; // Skip implantology as it's featured
+            const Icon = service.icon;
+            return (
+              <Card key={index} className="group hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur-sm">
+                <CardContent className="p-6 text-center h-full flex flex-col">
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Icon className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                    {service.description}
+                  <h3 className="text-lg font-bold mb-3 text-primary">{service.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                    {service.description.length > 100 
+                      ? service.description.substring(0, 100) + "..." 
+                      : service.description}
                   </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => <li key={idx} className="text-xs text-muted-foreground flex items-center justify-center">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
-                        {feature}
-                      </li>)}
-                  </ul>
-                  <Button variant="ghost" size="sm" onClick={scrollToAppointment} className="text-primary font-medium bg-sky-400 hover:bg-sky-300">
-                    Book Consultation
-                  </Button>
                 </CardContent>
-              </Card>;
-        })}
+              </Card>
+            );
+          })}
         </div>
 
         <div className="text-center mt-16">
