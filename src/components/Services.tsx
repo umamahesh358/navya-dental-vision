@@ -1,49 +1,59 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Smile, Heart, Activity, Baby, Shield, Stethoscope, Crown, Sparkles, Zap, Target, Syringe, Scissors } from "lucide-react";
+
+// Import professional medical icons
+import rootCanalIcon from "@/assets/icons/root-canal-icon.png";
+import dentalImplantIcon from "@/assets/icons/dental-implant-icon.png";
+import surgeryIcon from "@/assets/icons/surgery-icon.png";
+import cosmeticIcon from "@/assets/icons/cosmetic-icon.png";
+import orthodonticsIcon from "@/assets/icons/orthodontics-icon.png";
+import pediatricIcon from "@/assets/icons/pediatric-icon.png";
+import oralCareIcon from "@/assets/icons/oral-care-icon.png";
+import laserIcon from "@/assets/icons/laser-icon.png";
+import sedationIcon from "@/assets/icons/sedation-icon.png";
 const Services = () => {
   const services = [{
-    icon: Activity,
+    icon: rootCanalIcon,
     title: "Root Canal Treatment",
     description: "Pain-free single sitting and multi-sitting root canal therapy using advanced endodontic techniques.",
     features: ["Single Sitting RCT", "Multi Sitting RCT", "Pain-free Treatment", "Advanced Technology"]
   }, {
-    icon: Crown,
+    icon: dentalImplantIcon,
     title: "Dental Implantology",
     description: "World-class implants in association with Indian Dental Education Academy, Chennai.",
     features: ["Wide Range of Implants", "Expert Consultation", "Permanent Solution", "Natural Looking"]
   }, {
-    icon: Stethoscope,
+    icon: surgeryIcon,
     title: "Maxillofacial Surgeries",
     description: "Advanced facial surgeries including TMJ, orthognathic surgeries, and trauma management.",
     features: ["T.M.J Ankylosis", "Orthognathic Surgery", "Lefort Fractures", "Pan-facial Fractures"]
   }, {
-    icon: Sparkles,
+    icon: cosmeticIcon,
     title: "Cosmetic Dentistry",
     description: "Complete smile designing and aesthetic treatments for a perfect smile transformation.",
     features: ["Smile Designing", "Lip Contouring", "Dimple Creation", "Dental Jewellery"]
   }, {
-    icon: Target,
+    icon: orthodonticsIcon,
     title: "Orthodontics",
     description: "Orthodontic and dento-facial correction of malocclusions for proper teeth alignment.",
     features: ["Braces Treatment", "Dento-facial Correction", "Malocclusion Treatment", "Smile Alignment"]
   }, {
-    icon: Baby,
+    icon: pediatricIcon,
     title: "Pediatric Dentistry",
     description: "Specialized dental care for children with gentle approach and child-friendly environment.",
     features: ["Child-friendly Care", "Preventive Treatments", "Behavior Management", "Early Intervention"]
   }, {
-    icon: Smile,
+    icon: oralCareIcon,
     title: "Complete Oral Care",
     description: "Comprehensive dental services including prophylaxis, dentures, and bleaching treatments.",
     features: ["Oral Prophylaxis", "Complete Dentures", "Teeth Bleaching", "Fixed & Removable Teeth"]
   }, {
-    icon: Zap,
+    icon: laserIcon,
     title: "Laser Dentistry",
     description: "Advanced laser treatments for precise and minimally invasive dental procedures.",
     features: ["Laser Surgery", "Flap Surgeries", "Minimally Invasive", "Faster Healing"]
   }, {
-    icon: Syringe,
+    icon: sedationIcon,
     title: "Sedation Dentistry",
     description: "Comfortable dental treatments with sedation options for anxious patients.",
     features: ["Anxiety Management", "Comfortable Treatment", "Safe Sedation", "Relaxed Experience"]
@@ -76,12 +86,15 @@ const Services = () => {
         <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-6">
           {/* All Service Cards */}
           {services.slice(0, 8).map((service, index) => {
-            const Icon = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-elevated hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 bg-card/80 backdrop-blur-sm cursor-pointer hover:bg-primary hover:border-primary">
+              <Card key={index} className="group hover:shadow-elevated hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 bg-card/80 backdrop-blur-sm cursor-pointer hover:bg-blue-600 hover:border-blue-600">
                 <CardContent className="p-6 text-center h-full flex flex-col relative overflow-hidden">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white group-hover:scale-110 transition-all duration-300">
-                    <Icon className="h-6 w-6 text-primary group-hover:text-primary transition-colors duration-300" />
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white group-hover:scale-110 transition-all duration-300 p-2">
+                    <img 
+                      src={service.icon} 
+                      alt={`${service.title} icon`}
+                      className="w-full h-full object-contain transition-all duration-300"
+                    />
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-primary group-hover:text-white transition-colors">{service.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed flex-grow group-hover:text-white transition-colors">
