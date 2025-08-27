@@ -53,66 +53,6 @@ const Team = () => {
     image: doctor2,
     specialties: ["Pediatric Dentistry", "Child Care"],
     education: "M.S."
-  }, {
-    name: "Dr. Sowjanya",
-    role: "Cosmetic Dental Surgeon",
-    image: doctor1,
-    specialties: ["Cosmetic Dentistry", "Smile Designing"],
-    education: "M.D.S."
-  }, {
-    name: "Dr. T. Nalini",
-    role: "Anaesthetist",
-    image: doctor2,
-    specialties: ["Anaesthesia", "Sedation Dentistry"],
-    education: "M.B.B.S., B.A."
-  }, {
-    name: "Dr. M. Nagendra Prasad",
-    role: "Physician",
-    image: doctor1,
-    specialties: ["General Medicine", "Medical Care"],
-    education: "M.D., GEN"
-  }, {
-    name: "Dr. N. Ramakrishna Reddy",
-    role: "Neuro Surgeon",
-    image: doctor2,
-    specialties: ["Neurosurgery", "Brain Surgery"],
-    education: "M.S., M.Ch."
-  }, {
-    name: "Dr. Ch. Ratna Manmohan",
-    role: "Diabetologist",
-    image: doctor1,
-    specialties: ["Diabetes Care", "Endocrinology"],
-    education: "M.D.S., Dip. Dis."
-  }, {
-    name: "Prof. Dr. Y. Subba Rayudu",
-    role: "E.N.T. Specialist",
-    image: doctor2,
-    specialties: ["ENT Surgery", "Ear Nose Throat"],
-    education: "M.S.E.N.T."
-  }, {
-    name: "Dr. Ch. Kalyan Kumar",
-    role: "General Surgeon",
-    image: doctor1,
-    specialties: ["General Surgery", "Surgical Procedures"],
-    education: "M.S. GEN."
-  }, {
-    name: "Dr. N. Sarath Chandra",
-    role: "Neurologist",
-    image: doctor2,
-    specialties: ["Neurology", "Brain Disorders"],
-    education: "M.D.S., (ROM)"
-  }, {
-    name: "R. Sreesha",
-    role: "Audiologist & Speech Therapist",
-    image: doctor1,
-    specialties: ["Audiology", "Speech Therapy"],
-    education: "M.SC.(SLP), P.G.C.P.C.M.S."
-  }, {
-    name: "Dr. K. Subba Rao",
-    role: "Physiotherapist",
-    image: doctor2,
-    specialties: ["Physiotherapy", "Rehabilitation"],
-    education: "D.P.T."
   }];
   const scrollToAppointment = () => {
     const element = document.getElementById('appointment');
