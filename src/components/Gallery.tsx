@@ -60,23 +60,23 @@ const Gallery = () => {
   const facilityImages = [
     {
       title: "Reception Area",
-      image: "/api/placeholder/600/400",
-      description: "Welcoming and comfortable waiting area"
+      image: "/lovable-uploads/2e70fa0e-7bfd-413e-bb20-3a56d7b75929.png",
+      description: "Welcoming and comfortable waiting area with modern amenities"
     },
     {
       title: "Treatment Room",
-      image: "/api/placeholder/600/400",
-      description: "State-of-the-art dental equipment"
+      image: "/lovable-uploads/d816c11d-268d-4492-bf92-81bc05ae5639.png",
+      description: "Advanced treatment room with modern dental equipment and monitoring systems"
     },
     {
       title: "Surgery Suite",
-      image: "/api/placeholder/600/400",
-      description: "Advanced surgical facility"
+      image: "/lovable-uploads/a5d881c9-4368-4e2e-9442-f731981ef5bc.png",
+      description: "State-of-the-art surgical facility with advanced equipment"
     },
     {
       title: "Sterilization Center",
-      image: "/api/placeholder/600/400",
-      description: "100% sterile environment maintenance"
+      image: "/lovable-uploads/7476e918-c4b7-42ef-8b81-81de426c0d22.png",
+      description: "Professional sterilization equipment ensuring 100% sterile environment"
     }
   ];
 
