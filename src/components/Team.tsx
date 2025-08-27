@@ -141,7 +141,7 @@ const Team = () => {
           {doctors.map((doctor, index) => <Card key={index} className="group overflow-hidden hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 border-0 bg-card/80 backdrop-blur-sm">
               <div className="aspect-square relative overflow-hidden">
                 <img src={doctor.image} alt={doctor.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                
               </div>
               
               <CardContent className="p-6">
@@ -164,7 +164,7 @@ const Team = () => {
                   </div>
                 </div>
 
-                <Button onClick={scrollToAppointment} variant="outline" size="sm" className="w-full border-primary text-primary bg-sky-500 hover:bg-sky-400">
+                <Button onClick={scrollToAppointment} variant="outline" size="sm" className="w-full border-primary bg-sky-600 hover:bg-sky-500 text-slate-50">
                   <Calendar className="h-4 w-4 mr-2" />
                   Book Consultation
                 </Button>
