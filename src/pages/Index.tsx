@@ -4,7 +4,6 @@ import TrustBadges from "@/components/TrustBadges";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
 import Gallery from "@/components/Gallery";
-import InternationalPatients from "@/components/InternationalPatients";
 import AppointmentForm from "@/components/AppointmentForm";
 import Footer from "@/components/Footer";
 
@@ -17,7 +16,6 @@ const Index = () => {
       <Services />
       <Team />
       <Gallery />
-      <InternationalPatients />
       <AppointmentForm />
       <Footer />
     </div>
