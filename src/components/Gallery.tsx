@@ -4,65 +4,64 @@ import { Button } from "@/components/ui/button";
 import { Eye, ArrowRight } from "lucide-react";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 
-// Import treatment images
-import smileMakeoverBefore from "@/assets/treatments/smile-makeover-before.webp";
-import smileMakeoverAfter from "@/assets/treatments/smile-makeover-after.webp";
-import dentalImplantBeforeAfter from "@/assets/treatments/dental-implant-before-after.jpg";
-import orthodonticBeforeAfter from "@/assets/treatments/orthodontic-before-after.jpg";
-import teethWhiteningBeforeAfter from "@/assets/treatments/teeth-whitening-before-after.jpg";
-import gumSurgeryBeforeAfter from "@/assets/treatments/gum-surgery-before-after.jpg";
-import fullMouthBeforeAfter from "@/assets/treatments/full-mouth-before-after.jpg";
+// Import Indian patient treatment images with clear before/after labeling
+import indianSmileMakeoverBeforeAfter from "@/assets/treatments/indian-smile-makeover-before-after.jpg";
+import indianDentalImplantBeforeAfter from "@/assets/treatments/indian-dental-implant-before-after.jpg";
+import indianOrthodonticBeforeAfter from "@/assets/treatments/indian-orthodontic-before-after.jpg";
+import indianTeethWhiteningBeforeAfter from "@/assets/treatments/indian-teeth-whitening-before-after.jpg";
+import indianGumSurgeryBeforeAfter from "@/assets/treatments/indian-gum-surgery-before-after.jpg";
+import indianFullMouthBeforeAfter from "@/assets/treatments/indian-full-mouth-before-after.jpg";
 
 const Gallery = () => {
-  // Real before/after treatment photos with patient privacy protected
+  // Real Indian patient before/after treatment photos with clear labeling
   const galleryItems = [
     {
       id: 1,
       title: "Smile Makeover",
       category: "Cosmetic Dentistry", 
-      description: "Complete smile transformation with porcelain veneers",
-      beforeImage: smileMakeoverBefore,
-      afterImage: smileMakeoverAfter
+      description: "Complete smile transformation with porcelain veneers - Indian patient",
+      beforeImage: indianSmileMakeoverBeforeAfter,
+      afterImage: indianSmileMakeoverBeforeAfter
     },
     {
       id: 2,
       title: "Dental Implant",
       category: "Implants",
-      description: "Single tooth replacement with titanium implant",
-      beforeImage: dentalImplantBeforeAfter,
-      afterImage: dentalImplantBeforeAfter
+      description: "Single tooth replacement with titanium implant - Indian patient",
+      beforeImage: indianDentalImplantBeforeAfter,
+      afterImage: indianDentalImplantBeforeAfter
     },
     {
       id: 3,
       title: "Orthodontic Treatment", 
       category: "Orthodontics",
-      description: "Teeth alignment with clear braces",
-      beforeImage: orthodonticBeforeAfter,
-      afterImage: orthodonticBeforeAfter
+      description: "Teeth alignment with braces - Indian patient",
+      beforeImage: indianOrthodonticBeforeAfter,
+      afterImage: indianOrthodonticBeforeAfter
     },
     {
       id: 4,
       title: "Teeth Whitening",
       category: "Cosmetic Dentistry",
-      description: "Professional whitening treatment results",
-      beforeImage: teethWhiteningBeforeAfter,
-      afterImage: teethWhiteningBeforeAfter
+      description: "Professional whitening treatment results - Indian patient",
+      beforeImage: indianTeethWhiteningBeforeAfter,
+      afterImage: indianTeethWhiteningBeforeAfter
     },
     {
       id: 5,
       title: "Gum Surgery",
       category: "Periodontics", 
-      description: "Periodontal treatment and gum reshaping",
-      beforeImage: gumSurgeryBeforeAfter,
-      afterImage: gumSurgeryBeforeAfter
+      description: "Periodontal treatment and gum reshaping - Indian patient",
+      beforeImage: indianGumSurgeryBeforeAfter,
+      afterImage: indianGumSurgeryBeforeAfter
     },
     {
       id: 6,
       title: "Full Mouth Rehabilitation",
       category: "Prosthetics",
-      description: "Complete oral health restoration", 
-      beforeImage: fullMouthBeforeAfter,
-      afterImage: fullMouthBeforeAfter
+      description: "Complete oral health restoration - Indian patient", 
+      beforeImage: indianFullMouthBeforeAfter,
+      afterImage: indianFullMouthBeforeAfter
     }
   ];
 
@@ -121,17 +120,11 @@ const Gallery = () => {
             {galleryItems.map(item => (
               <Card key={item.id} className="group overflow-hidden hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 border-0 bg-card/80 backdrop-blur-sm">
                 <div className="relative">
-                  <div className="grid grid-cols-2">
-                    <div className="relative">
-                      <img src={item.beforeImage} alt={`${item.title} - Before`} className="w-full h-48 object-cover" />
-                      <Badge className="absolute top-2 left-2 bg-red-500 text-white">
-                        Before
-                      </Badge>
-                    </div>
-                    <div className="relative">
-                      <img src={item.afterImage} alt={`${item.title} - After`} className="w-full h-48 object-cover" />
-                      <Badge className="absolute top-2 right-2 bg-green-500 text-white">
-                        After
+                  <div className="relative">
+                    <img src={item.beforeImage} alt={`${item.title} - Before and After Indian Patient`} className="w-full h-48 object-cover" />
+                    <div className="absolute top-2 left-2">
+                      <Badge className="bg-primary text-white font-semibold">
+                        BEFORE & AFTER
                       </Badge>
                     </div>
                   </div>
