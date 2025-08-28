@@ -21,22 +21,22 @@ const BeforeAfterSlider = () => {
       id: 1,
       title: "Smile Transformation",
       procedure: "Cosmetic Dentistry",
-      beforeImage: "/assets/before-1.jpg",
-      afterImage: "/assets/after-1.jpg"
+      beforeImage: "/lovable-uploads/28b405f8-7a3b-4d32-b382-99db6a21e960.png",
+      afterImage: "/lovable-uploads/28b405f8-7a3b-4d32-b382-99db6a21e960.png"
     },
     {
       id: 2,
       title: "Dental Implant",
       procedure: "Implantology",
-      beforeImage: "/assets/before-2.jpg",
-      afterImage: "/assets/after-2.jpg"
+      beforeImage: "/lovable-uploads/be251724-f14a-4dfe-8fb8-0c3c4c30fb6d.png",
+      afterImage: "/lovable-uploads/be251724-f14a-4dfe-8fb8-0c3c4c30fb6d.png"
     },
     {
       id: 3,
       title: "Orthodontic Treatment",
       procedure: "Orthodontics",
-      beforeImage: "/assets/before-3.jpg",
-      afterImage: "/assets/after-3.jpg"
+      beforeImage: "/lovable-uploads/d82e0123-d9cc-4224-aadf-ec28b275012e.png",
+      afterImage: "/lovable-uploads/d82e0123-d9cc-4224-aadf-ec28b275012e.png"
     }
   ];
 

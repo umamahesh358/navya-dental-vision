@@ -4,64 +4,58 @@ import { Button } from "@/components/ui/button";
 import { Eye, ArrowRight } from "lucide-react";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 
-// Import Indian patient treatment images with clear before/after labeling
-import indianSmileMakeoverBeforeAfter from "@/assets/treatments/indian-smile-makeover-before-after.jpg";
-import indianDentalImplantBeforeAfter from "@/assets/treatments/indian-dental-implant-before-after.jpg";
-import indianOrthodonticBeforeAfter from "@/assets/treatments/indian-orthodontic-before-after.jpg";
-import indianTeethWhiteningBeforeAfter from "@/assets/treatments/indian-teeth-whitening-before-after.jpg";
-import indianGumSurgeryBeforeAfter from "@/assets/treatments/indian-gum-surgery-before-after.jpg";
-import indianFullMouthBeforeAfter from "@/assets/treatments/indian-full-mouth-before-after.jpg";
+// Import real treatment images with clear before/after labeling
 
 const Gallery = () => {
-  // Real Indian patient before/after treatment photos with clear labeling
+  // Real patient before/after treatment photos with clear labeling
   const galleryItems = [
     {
       id: 1,
       title: "Smile Makeover",
       category: "Cosmetic Dentistry", 
-      description: "Complete smile transformation with porcelain veneers - Indian patient",
-      beforeImage: indianSmileMakeoverBeforeAfter,
-      afterImage: indianSmileMakeoverBeforeAfter
+      description: "Complete smile transformation with porcelain veneers showing dramatic improvement",
+      beforeImage: "/lovable-uploads/28b405f8-7a3b-4d32-b382-99db6a21e960.png",
+      afterImage: "/lovable-uploads/28b405f8-7a3b-4d32-b382-99db6a21e960.png"
     },
     {
       id: 2,
       title: "Dental Implant",
       category: "Implants",
-      description: "Single tooth replacement with titanium implant - Indian patient",
-      beforeImage: indianDentalImplantBeforeAfter,
-      afterImage: indianDentalImplantBeforeAfter
+      description: "Single tooth replacement with titanium implant including X-ray documentation",
+      beforeImage: "/lovable-uploads/be251724-f14a-4dfe-8fb8-0c3c4c30fb6d.png",
+      afterImage: "/lovable-uploads/be251724-f14a-4dfe-8fb8-0c3c4c30fb6d.png"
     },
     {
       id: 3,
       title: "Orthodontic Treatment", 
       category: "Orthodontics",
-      description: "Teeth alignment with braces - Indian patient",
-      beforeImage: indianOrthodonticBeforeAfter,
-      afterImage: indianOrthodonticBeforeAfter
+      description: "Teeth alignment with braces showing excellent results in young patients",
+      beforeImage: "/lovable-uploads/d82e0123-d9cc-4224-aadf-ec28b275012e.png",
+      afterImage: "/lovable-uploads/d82e0123-d9cc-4224-aadf-ec28b275012e.png"
     },
     {
       id: 4,
       title: "Teeth Whitening",
       category: "Cosmetic Dentistry",
-      description: "Professional whitening treatment results - Indian patient",
-      beforeImage: indianTeethWhiteningBeforeAfter,
-      afterImage: indianTeethWhiteningBeforeAfter
+      description: "Professional whitening treatment results with noticeable shade improvement",
+      beforeImage: "/lovable-uploads/16d4a1ae-5721-4a0c-9176-42861e36d0ff.png",
+      afterImage: "/lovable-uploads/16d4a1ae-5721-4a0c-9176-42861e36d0ff.png"
     },
     {
       id: 5,
       title: "Gum Surgery",
       category: "Periodontics", 
-      description: "Periodontal treatment and gum reshaping - Indian patient",
-      beforeImage: indianGumSurgeryBeforeAfter,
-      afterImage: indianGumSurgeryBeforeAfter
+      description: "Periodontal treatment and gum reshaping for improved oral health",
+      beforeImage: "/lovable-uploads/fb4cb3f1-4287-4e02-b154-9279dbc246e2.png",
+      afterImage: "/lovable-uploads/fb4cb3f1-4287-4e02-b154-9279dbc246e2.png"
     },
     {
       id: 6,
       title: "Full Mouth Rehabilitation",
       category: "Prosthetics",
-      description: "Complete oral health restoration - Indian patient", 
-      beforeImage: indianFullMouthBeforeAfter,
-      afterImage: indianFullMouthBeforeAfter
+      description: "Complete oral health restoration with comprehensive treatment plan", 
+      beforeImage: "/lovable-uploads/afeeccee-b223-4ec7-842e-6d5c08552b20.png",
+      afterImage: "/lovable-uploads/afeeccee-b223-4ec7-842e-6d5c08552b20.png"
     }
   ];
 
