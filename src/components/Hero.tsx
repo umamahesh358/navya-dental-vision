@@ -80,7 +80,7 @@ const Hero = () => {
           <div className="relative">
             <Card className="overflow-hidden shadow-hero bg-gradient-card backdrop-blur-sm border-0 animate-float">
               <div className="aspect-video relative">
-                <img src={heroImage} alt="Modern Dental Hospital Interior" className="w-full h-full object-cover" />
+                <img src="/lovable-uploads/51f3537f-cb6d-4afa-8e7f-d6f2d3e89ca3.png" alt="Modern Dental Hospital Interior" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-hero" />
               </div>
               
