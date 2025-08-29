@@ -76,71 +76,15 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Hero Card */}
+          {/* Right Content - Hero Image */}
           <div className="relative">
-            <Card className="overflow-hidden shadow-hero bg-gradient-card backdrop-blur-sm border-0 animate-float">
-              <div className="aspect-video relative">
-                <img src={heroImage} alt="Modern Dental Hospital Interior" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-hero" />
-              </div>
-              
-              <div className="p-8 space-y-6">
-                {/* Hospital Exterior Image */}
-                <div className="mb-6 rounded-lg overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/06504c0d-28dc-4e9a-8471-4e56de6b1624.png" 
-                    alt="NAVYA'S International Dental Hospital Exterior" 
-                    className="w-full h-48 object-cover"
-                  />
-                </div>
-                
-                <h3 className="text-2xl font-bold text-foreground">
-                  State-of-the-Art Facility
-                </h3>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <Shield className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium text-sm">100% Sterile</div>
-                      <div className="text-xs text-muted-foreground">Environment</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <Award className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium text-sm">Advanced</div>
-                      <div className="text-xs text-muted-foreground">Technology</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <Clock className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium text-sm">Single Sitting</div>
-                      <div className="text-xs text-muted-foreground">Root Canal</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <Users className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium text-sm">Expert</div>
-                      <div className="text-xs text-muted-foreground">Specialists</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Card>
+            <div className="overflow-hidden rounded-lg shadow-hero">
+              <img 
+                src="/lovable-uploads/06504c0d-28dc-4e9a-8471-4e56de6b1624.png" 
+                alt="NAVYA'S International Dental Hospital" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
