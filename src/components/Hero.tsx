@@ -85,6 +85,15 @@ const Hero = () => {
               </div>
               
               <div className="p-8 space-y-6">
+                {/* Hospital Exterior Image */}
+                <div className="mb-6 rounded-lg overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/06504c0d-28dc-4e9a-8471-4e56de6b1624.png" 
+                    alt="NAVYA'S International Dental Hospital Exterior" 
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+                
                 <h3 className="text-2xl font-bold text-foreground">
                   State-of-the-Art Facility
                 </h3>
