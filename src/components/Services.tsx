@@ -87,7 +87,7 @@ const Services = () => {
           {/* All Service Cards */}
           {services.slice(0, 8).map((service, index) => {
             return (
-              <Card key={index} className="group hover:shadow-elevated hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 bg-card/80 backdrop-blur-sm cursor-pointer hover:bg-blue-600 hover:border-blue-600">
+              <Card key={index} className="group hover:shadow-elevated hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 bg-card/80 backdrop-blur-sm cursor-pointer hover:bg-blue-600 hover:border-blue-600" onClick={scrollToAppointment}>
                 <CardContent className="p-6 text-center h-full flex flex-col relative overflow-hidden">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white group-hover:scale-110 transition-all duration-300 p-2">
                     <img 

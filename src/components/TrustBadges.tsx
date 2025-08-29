@@ -4,7 +4,6 @@ import { Shield, Award, Users, Clock, Star, CheckCircle } from "lucide-react";
 
 const TrustBadges = () => {
   const accreditations = [
-    { name: "ISO Certified", icon: Shield },
     { name: "Medical Board", icon: Award },
     { name: "Quality Assured", icon: CheckCircle },
     { name: "Patient Safety", icon: Users }

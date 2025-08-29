@@ -43,7 +43,7 @@ const Hero = () => {
             <div className="text-sm text-muted-foreground flex flex-wrap items-center gap-4">
               <span className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-primary" />
-                ISO-level sterilization
+                Advanced sterilization
               </span>
               <span className="flex items-center gap-2">
                 <Award className="h-4 w-4 text-primary" />
